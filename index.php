@@ -6,7 +6,6 @@ Creare una variabile con un paragrafo di testo a vostra scelta.
 Stampare a schermo il paragrafo e la sua lunghezza.
 Una parola da censurare viene passata dall'utente tramite parametro GET.
 Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
-
 <?php
     $sentence="Hai rotto il cavolo tu e qeulla simpaticona di tua madre";
     $wordTobeChanged=['cavolo','simpaticona'];
@@ -25,7 +24,7 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     <h1>Let's be offensive!</h1>
     <p><?php echo $sentence ;?></p>
     <p>The string length is: <?php echo strlen($sentence); ?>.</p>
-    <p><?php echo $modifiedSentence; ?></p>
+    <p><?php echo str_replace($swearWords ,'***',$modifiedSentence); ?></p>
     <p>The new string length is: <?php echo strlen($modifiedSentence); ?>.</p>
 </body>
 </html>
